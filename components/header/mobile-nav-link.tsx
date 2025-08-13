@@ -23,9 +23,9 @@ const MobileNavLink: React.FC<MobileNavLinkProps> = ({
     <Link
       href={linkUrl}
       onClick={onClick}
-      className={`flex items-center justify-center py-4 border-b font-bold transition-all duration-300 ease-out ${
+      className={`flex items-center justify-center py-4 font-bold transition-all duration-300 ease-out ${
         isActive
-          ? 'text-indigo-700'
+          ? 'text-indigo-700 bg-blue-50 rounded-lg'
           : 'text-gray-700 hover:text-indigo-700 hover:font-bold'
       }`}
     >
