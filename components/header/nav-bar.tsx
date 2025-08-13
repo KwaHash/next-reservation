@@ -9,7 +9,6 @@ import { FiUploadCloud , FiHome, FiUser } from 'react-icons/fi'
 import { HiOutlineCalculator } from 'react-icons/hi'
 import { LuBuilding2 } from 'react-icons/lu'
 import { MdOutlinePalette } from 'react-icons/md'
-import { RiRobot2Line } from 'react-icons/ri'
 import { SlMenu } from 'react-icons/sl'
 import MobileNavLink from '@/components/header/mobile-nav-link'
 import NavLink from '@/components/header/nav-link'
@@ -98,7 +97,7 @@ const NavBar = () => {
               linkUrl="/color-simulation"
             />
             <MobileNavLink
-              icon={<RiRobot2Line />}
+              icon={<FiUploadCloud />}
               text="見積送信"
               onClick={() => setIsMenuOpen(false)}
               linkUrl="/estimate-upload"
