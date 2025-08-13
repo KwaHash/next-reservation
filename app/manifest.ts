@@ -2,9 +2,9 @@ import  { type MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: '',
-    short_name: '',
-    description: '',
+    name: '東京都特化型リフォーム×AIポータル',
+    short_name: '東京都特化型リフォーム×AIポータル',
+    description: '東京都に特化したリフォーム情報とAI技術を融合したポータルサイトです。地域密着の施工事例や最新のリフォームプランを、AIによる自動提案やシミュレーション機能でわかりやすく提供します。見積り比較、カラーシミュレーション、費用概算など、リフォームに必要な情報をワンストップでサポートし、理想の住まいづくりを効率的に実現します。',
     start_url: '/',
     display: 'fullscreen',
     background_color: '#030712',
