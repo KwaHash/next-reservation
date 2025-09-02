@@ -319,9 +319,7 @@ const TopPage = () => {
             <p className="flex flex-col sm:flex-row">
               <span className='mr-2'>お急ぎの方は直接お電話ください：</span>
               <span>
-                <a href={`tel:${phoneNumber}`} className="font-bold text-yellow-300 hover:underline">
-                {phoneNumber}
-                </a>
+                <a href={`tel:${phoneNumber}`} className="font-bold text-yellow-300 hover:underline">{phoneNumber}</a>
                 <span>（平日 9:00-18:00）</span>
               </span>
             </p>
