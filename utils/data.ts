@@ -1,12 +1,67 @@
 import { BsFillBarChartLineFill } from 'react-icons/bs'
 import { FaCameraRetro, FaSearch, FaRegChartBar } from 'react-icons/fa'
-import { FiUploadCloud } from 'react-icons/fi'
+import { FaBath ,  FaKitchenSet , FaBed } from 'react-icons/fa6'
+import { FiUploadCloud , FiHome, FiUser } from 'react-icons/fi'
+import { GiBedLamp , GiHouse } from 'react-icons/gi'
 import { HiOutlineCalculator } from 'react-icons/hi'
-import { LuShieldCheck, LuClock, LuAward  } from 'react-icons/lu'
-import { MdOutlinePalette } from 'react-icons/md'
+import { HiBuildingOffice } from 'react-icons/hi2'
+import { LuBuilding2 , LuShieldCheck, LuClock, LuAward  } from 'react-icons/lu'
+import { MdOutlineApartment , MdOutlinePalette  } from 'react-icons/md'
+import { PiSolarRoofBold , PiToiletFill } from 'react-icons/pi'
 import { RiRobot2Fill } from 'react-icons/ri'
 
-export const phoneNumber = '03-1234-5678'
+
+export const companyInfo = {
+	address: '東京都新宿区西新宿1-1-1',
+	phone: '03-1234-5678',
+	mail: 'info@yutakahome.jp',
+	working: '平日 9:00-18:00'
+}
+
+export const services = [
+	{
+		text: 'ホーム',
+		linkUrl: '/',
+		icon: FiHome,
+	},
+	{
+		text: 'AI概算',
+		linkUrl: '/ai-simulation',
+		icon: HiOutlineCalculator,
+	},
+	{
+		text: '色替え',
+		linkUrl: '/color-simulation',
+		icon: MdOutlinePalette,
+	},
+	{
+		text: '見積送信',
+		linkUrl: '/estimate-upload',
+		icon: FiUploadCloud,
+	},
+	{
+		text: '比較結果',
+		linkUrl: '/comparison',
+		icon: FaRegChartBar,
+	},
+	{
+		text: 'マイページ',
+		linkUrl: '/my-page',
+		icon: FiUser,
+	},
+	{
+		text: '施工会社',
+		linkUrl: '/builder',
+		icon: LuBuilding2,
+	}
+]
+
+export const supports = [
+  { linkUrl: '/terms', text: '利用規約' },
+  { linkUrl: '/privacy', text: 'プライバシーポリシー' },
+  { linkUrl: '/faq', text: 'よくある質問' },
+  { linkUrl: '/contact', text: 'お問い合わせ' },
+]
 
 export const processSteps = [
 	{
@@ -105,4 +160,109 @@ export const faqs = [
 		question: '工事の品質保証はありますか？',
 		answer: '全ての施工に対して最低5年間の品質保証を提供しています。また、定期点検やアフターサービスも充実しています。'
 	}
+]
+
+export const renovations = [
+	{
+		id: 'kitchen',
+		label: 'キッチン',
+		icon: FaKitchenSet
+	},
+	{
+		id: 'bathroom',
+		label: 'バスルーム',
+		icon: FaBath
+	},
+	{
+		id: 'living',
+		label: 'リビング',
+		icon: GiBedLamp
+	},
+	{
+		id: 'bedroom',
+		label: '寝室',
+		icon: FaBed
+	},
+	{
+		id: 'toilet',
+		label: 'トイレ',
+		icon: PiToiletFill
+	},
+	{
+		id: 'exterior',
+		label: '外壁・屋根',
+		icon: PiSolarRoofBold
+	}
+]
+
+export const properties = [
+	{
+		id: 'apartment',
+		label: 'マンション',
+		icon: MdOutlineApartment
+	},
+	{
+		id: 'house',
+		label: '戸建て',
+		icon: GiHouse
+	},
+	{
+		id: 'office',
+		label: 'オフィス',
+		icon: HiBuildingOffice
+	}
+]
+
+export const areas = [
+	{
+		id: 'chiyoda',
+		label: '千代田区'
+	},
+	{
+		id: 'chuo',
+		label: '中央区'
+	},
+	{
+		id: 'minato',
+		label: '港区'
+	},
+	{
+		id: 'shinjuku',
+		label: '新宿区'
+	},
+	{
+		id: 'bunkyo',
+		label: '文京区'
+	},
+	{
+		id: 'shibuya',
+		label: '渋谷区'
+	},
+	{
+		id: 'tama',
+		label: '多摩エリア'
+	}
+]
+
+export const periods = [
+	{
+		id: 'immediate',
+		label: 'すぐに'
+	},
+	{
+		id: '1month',
+		label: '1ヶ月以内'
+	},
+	{
+		id: '3months',
+		label: '3ヶ月以内'
+	},
+	{
+		id: '6months',
+		label: '6ヶ月以内'
+	},
+	{
+		id: '1year',
+		label: '1年以内'
+	},
 ]
