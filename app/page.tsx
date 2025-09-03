@@ -1,5 +1,4 @@
 import React from 'react'
-import { Phone } from 'lucide-react'
 import Link from 'next/link'
 import { BsLampFill , BsStars } from 'react-icons/bs'
 import { FaPhoneAlt ,  FaArrowRight } from 'react-icons/fa'
@@ -7,7 +6,7 @@ import { FcHome } from 'react-icons/fc'
 import {  FiCheckCircle , FiHelpCircle } from 'react-icons/fi'
 import { HiOutlineCalculator } from 'react-icons/hi'
 import { PiCloudWarningFill } from 'react-icons/pi'
-import { processSteps, features, benefits, faqs , phoneNumber } from '@/utils/data'
+import { processSteps, features, benefits, faqs, companyInfo } from '@/utils/data'
 
 
 const TopPage = () => {
@@ -300,10 +299,10 @@ const TopPage = () => {
             </Link>
             <div className="flex flex-col w-full sm:flex-row gap-4 max-w-[432px]">
               <a
-                href={`tel:${phoneNumber}`}
+                href={`tel:${companyInfo.phone}`}
                 className="flex items-center justify-center px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 gap-3"
               >
-                <Phone className="w-5 h-5 mr-2 shrink-0" />
+                <FaPhoneAlt className="w-5 h-5 mr-2 shrink-0" />
                 電話で相談
               </a>
               <Link
@@ -319,7 +318,7 @@ const TopPage = () => {
             <p className="flex flex-col sm:flex-row">
               <span className='mr-2'>お急ぎの方は直接お電話ください：</span>
               <span>
-                <a href={`tel:${phoneNumber}`} className="font-bold text-yellow-300 hover:underline">{phoneNumber}</a>
+                <a href={`tel:${companyInfo.phone}`} className="font-bold text-yellow-300 hover:underline">{companyInfo.phone}</a>
                 <span>（平日 9:00-18:00）</span>
               </span>
             </p>

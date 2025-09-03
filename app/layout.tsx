@@ -3,7 +3,9 @@ import '@/styles/globals.scss'
 import { StrictMode } from 'react'
 import HolyLoader from 'holy-loader'
 import { type Metadata, type Viewport } from 'next'
+import { Noto_Sans_JP } from 'next/font/google'
 import Providers from '@/app/providers'
+import Footer from '@/components/footer/footer'
 import NavBar from '@/components/header/nav-bar'
 import ScrollTopButton from '@/components/scroll-top-button'
 import TailwindIndicator from '@/components/tailwind-indicator'
@@ -60,6 +62,12 @@ export const metadata: Metadata = {
   ],
 }
 
+const notoSansJP = Noto_Sans_JP({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,14 +76,15 @@ export default function RootLayout({
   return (
     <StrictMode>
       <html lang="jp" suppressHydrationWarning>
-        <body>
+        <body className={notoSansJP.className}>
           <HolyLoader color="#4338CA" height="2px" easing="linear" />
           <Providers>
-            <div className="flex flex-col w-full min-h-screen overflow-y-auto">
+            <div className="flex flex-col w-full min-h-screen overflow-x-hidden overflow-y-auto">
               <NavBar />
               <main className="flex flex-col w-full min-h-[calc(100dvh_-_80px)] mt-20">
                 {children}
               </main>
+              <Footer />
               <ScrollTopButton />
             </div>
             <TailwindIndicator />
